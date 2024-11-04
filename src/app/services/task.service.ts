@@ -5,6 +5,12 @@ import { Task } from '../models/task';
   providedIn: 'root'
 })
 export class TaskService {
+  updateTasks() {
+    throw new Error('Method not implemented.');
+  }
+  getTasks(): Task[] {
+    throw new Error('Method not implemented.');
+  }
 
   constructor() { }
 
@@ -26,6 +32,8 @@ export class TaskService {
   }
 
   addTask(task: Task) {
+
+    task.id = this.tasks.length + 1;
 
     this.tasks.push(task);
 
