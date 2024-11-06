@@ -35,17 +35,19 @@ addTask() {
 }
 
  removeTask(task: Task) {
+  
   this.taskService.removeTask(task);
  }
 
  updateTasks() {
+  
   this.taskService.updateTasks();
  }
 
  filterTasks(filter: string) {
 
    if (filter !== '') {
-        this.tasks = this.tasks.filter(c => c.name.includes(filter))
+        this.tasks = this.tasks.filter(c => c.name?.includes(filter))
    }
    else
    {

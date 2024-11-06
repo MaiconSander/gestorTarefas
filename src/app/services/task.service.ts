@@ -5,18 +5,12 @@ import { Task } from '../models/task';
   providedIn: 'root'
 })
 export class TaskService {
-  updateTasks() {
-    throw new Error('Method not implemented.');
-  }
-  getTasks(): Task[] {
-    throw new Error('Method not implemented.');
-  }
 
   constructor() { }
 
   private tasks: Array<Task> = [];
 
-  getTaks(): Array<Task> {
+  getTasks(): Array<Task> {
 
     this.tasks = this.getFromLocalStorage();
     
@@ -40,7 +34,7 @@ export class TaskService {
     this.saveToLocalStorage();
   }
 
-  uptadeTasks() {
+  updateTasks() {
     this.saveToLocalStorage()
   }
 
